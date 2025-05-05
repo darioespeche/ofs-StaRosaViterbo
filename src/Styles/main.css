@@ -1,0 +1,25 @@
+:root {
+  --color-text: #542015;
+  --color-bg: #f3f6fa;
+  --color-accent: #f1edea;
+  --color-hover: #e5a472;
+  --color-blanco: #ffffff;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: sans-serif;
+}
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-accent);
+}

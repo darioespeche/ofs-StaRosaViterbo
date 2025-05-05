@@ -1,0 +1,40 @@
+.page-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin: 4rem auto;
+  max-width: 1000px;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.page-section img {
+  flex: 0 0 400px; /* ancho fijo */
+  height: 400px; /* alto fijo */
+  object-fit: cover; /* recorta/censa la imagen */
+  border-radius: 4px;
+  transition: transform 0.3s;
+  object-position: center top;
+}
+
+.page-section-text {
+  flex: 1;
+  min-width: 280px;
+  margin: 1rem;
+  font-size: 1.1rem;
+}
+
+.drive-section {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.drive-section iframe {
+  width: 100%;
+  max-width: 1000px;
+  height: 600px;
+  border: none;
+  border-radius: 8px;
+}

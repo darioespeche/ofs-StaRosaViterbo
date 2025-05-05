@@ -1,0 +1,120 @@
+/* src/components/NavBar.css */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+  z-index: 1000;
+}
+
+/* Empuja el contenido para no taparlo */
+body {
+  padding-top: 80px; /* ajusta según la altura real del navbar */
+}
+
+/* Logo */
+.navbar__logo img {
+  width: 70px; /* ancho fijo */
+  height: 70px; /* alto fijo, mismo que el ancho */
+  object-fit: cover; /* recorta y centra el contenido */
+  border-radius: 50%;
+}
+
+/* Toggle (hamburger) */
+.navbar__toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: var(--color-bg);
+  cursor: pointer;
+}
+
+/* Menú principal */
+.navbar__menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+/* Submenús igual que antes */
+.navbar__menu li {
+  position: relative;
+}
+.navbar__menu li > a,
+.navbar__menu li > span {
+  color: var(--color-blanco);
+  text-decoration: none;
+  padding: 0.5rem;
+  display: block;
+}
+.navbar__menu li:hover > a,
+.navbar__menu li:hover > span {
+  color: var(--color-hover);
+}
+
+/* Primer dropdown */
+.navbar__menu li > ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--color-text);
+  border: 1px solid var(--color-text);
+  padding: 0.5rem 0;
+  list-style: none;
+}
+.navbar__menu li:hover > ul {
+  display: block;
+}
+
+/* Fly-out segundo nivel */
+.navbar__menu li ul li.has-submenu:hover > ul {
+  display: block;
+}
+.navbar__menu li ul li.has-submenu > ul {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: var(--color-text);
+  border: 1px solid var(--color-text);
+  padding: 0.5rem 0;
+  list-style: none;
+}
+
+/* Responsive: a partir de 768px hacia abajo */
+@media (max-width: 768px) {
+  .navbar__toggle {
+    display: block;
+  }
+  .navbar__menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-text);
+    flex-direction: column;
+    display: none;
+  }
+  .navbar__menu--open {
+    display: flex;
+  }
+  .navbar__menu li {
+    width: 100%;
+    text-align: center;
+  }
+  /* Ocultar submenús completos (puedes ajustarlo si quieres acordeón JS) */
+  .navbar__menu li > ul,
+  .navbar__menu li ul li.has-submenu > ul {
+    position: static;
+    border: none;
+    background: transparent;
+  }
+}

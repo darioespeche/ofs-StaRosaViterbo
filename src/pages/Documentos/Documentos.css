@@ -1,0 +1,253 @@
+/* Documentos.css */
+.doc-container {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 1rem;
+  color: var(--color-text);
+}
+
+/* Hero común: imagen + bloque de texto */
+.doc-hero {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.doc-hero__logo img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: transform 0.3s;
+}
+.doc-hero__logo img:hover {
+  transform: scale(1.05);
+}
+
+.doc-hero__text {
+  flex: 1;
+}
+.doc-hero__text h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.doc-hero__text p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.doc-hero__descripcion em {
+  font-size: 0.8rem;
+  line-height: 1.2;
+  margin-top: 0.5rem;
+}
+
+/* Acordeón */
+.doc-accordion details {
+  border: 1px solid var(--color-text);
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.doc-accordion details + details {
+  margin-top: 1rem;
+}
+
+/* Summary (título clicable) */
+.doc-accordion summary {
+  padding: 1rem;
+  background: var(--color-accent);
+  color: var(--color-text);
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+/* Ocultar marcador por defecto */
+.doc-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Pseudo-icono */
+.doc-accordion summary::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: 0.5rem;
+  transition: transform 0.2s;
+}
+
+.doc-accordion details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+/* Cambios de color cuando está abierto */
+.doc-accordion details[open] summary {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+
+/*Titulo*/
+.doc-panel {
+  background: var(--color-bg);
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.doc-panel__title {
+  font-size: 2rem;
+}
+
+/* Contenido interno */
+.doc-content {
+  padding: 1rem;
+  background: var(--color-bg);
+}
+
+.doc-content__descripcion p,
+em {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+/* Párrafos */
+.doc-content p {
+  margin: 0 0 1rem;
+  line-height: 1.6;
+}
+
+/* Último párrafo sin margen inferior */
+.doc-content p:last-child,
+.doc-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Fecha en cursiva */
+.doc-content .doc-content__fecha {
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  color: #555;
+}
+
+/* Responsive: apilar en móvil */
+@media (max-width: 768px) {
+  .doc-container {
+    padding: 1rem;
+    margin: 1rem auto;
+    max-width: 100%;
+  }
+  .doc-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .doc-hero__logo img {
+    max-width: 250px;
+  }
+  .doc-hero__text h1 {
+    font-size: 1.5rem;
+  }
+  .doc-hero__text p {
+    font-size: 1rem;
+  }
+  .doc-hero__descripcion em {
+    font-size: 0.7rem;
+  }
+  .doc-accordion summary {
+    font-size: 1rem;
+  }
+  .doc-accordion summary::before {
+    font-size: 1.5rem;
+  }
+  .doc-accordion details[open] summary {
+    font-size: 1rem;
+  }
+  .doc-panel__title {
+    font-size: 1.5rem;
+  }
+  .doc-content__descripcion p,
+  em {
+    font-size: 1rem;
+  }
+  .doc-content p {
+    font-size: 1rem;
+  }
+  .doc-content .doc-content__fecha {
+    font-size: 0.9rem;
+  }
+  .doc-content p:last-child,
+  .doc-content p:last-child {
+    margin-bottom: 0;
+  }
+  .doc-accordion details {
+    border: 1px solid var(--color-text);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
+}
+
+/* Responsive: apilar en tablet */
+@media (max-width: 1024px) {
+  .doc-container {
+    padding: 1rem;
+    margin: 1rem auto;
+    max-width: 100%;
+  }
+  .doc-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .doc-hero__logo img {
+    max-width: 300px;
+  }
+  .doc-hero__text h1 {
+    font-size: 2rem;
+  }
+  .doc-hero__text p {
+    font-size: 1.4rem;
+  }
+  .doc-hero__descripcion em {
+    font-size: 0.9rem;
+  }
+  .doc-accordion summary {
+    font-size: 1.1rem;
+  }
+  .doc-accordion summary::before {
+    font-size: 1.5rem;
+  }
+  .doc-accordion details[open] summary {
+    font-size: 1.1rem;
+  }
+  .doc-panel__title {
+    font-size: 1.8rem;
+  }
+  .doc-content__descripcion p,
+  em {
+    font-size: 1.2rem;
+  }
+  .doc-content p {
+    font-size: 1.2rem;
+  }
+  .doc-content .doc-content__fecha {
+    font-size: 1rem;
+  }
+  .doc-content p:last-child,
+  .doc-content p:last-child {
+    margin-bottom: 0;
+  }
+  .doc-accordion details {
+    border: 1px solid var(--color-text);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
+  .doc-accordion summary {
+    font-size: 1.1rem;
+  }
+}

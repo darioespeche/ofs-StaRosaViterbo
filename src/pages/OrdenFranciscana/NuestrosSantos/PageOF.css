@@ -1,0 +1,61 @@
+/* saints.css (compartido por todos los Santos) */
+
+.saint-hero {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin: 4rem auto;
+  max-width: 1000px;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.saint-hero__img {
+  flex: 0 0 400px; /* ancho fijo */
+  height: 400px; /* alto fijo */
+  object-fit: cover; /* recorta/censa la imagen */
+  border-radius: 4px;
+  transition: transform 0.3s;
+  object-position: center top;
+}
+.saint-hero__img:hover {
+  transform: scale(1.05);
+}
+
+.saint-hero__text {
+  flex: 1;
+}
+.saint-hero__text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.saint-hero__text em {
+  font-size: 1.2rem;
+  color: #555;
+}
+/* contenido */
+
+.saint-text {
+  max-width: 800px;
+  margin: 2rem auto;
+  font-size: 1.22rem;
+  line-height: 1.6;
+}
+.saint-text p {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .saint-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .saint-hero__img {
+    margin: 0 auto;
+  }
+  .saint-text {
+    column-count: 1;
+  }
+}
