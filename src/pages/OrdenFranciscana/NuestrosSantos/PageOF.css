@@ -50,12 +50,23 @@
 @media (max-width: 768px) {
   .saint-hero {
     flex-direction: column;
-    text-align: center;
+    align-items: center;
+    margin: 1rem;
+    margin-top: 4rem;
   }
+
   .saint-hero__img {
-    margin: 0 auto;
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
   }
+
+  .saint-hero__text h1 {
+    font-size: 2rem;
+  }
+
   .saint-text {
-    column-count: 1;
+    font-size: 1rem;
+    margin: 1rem;
   }
 }

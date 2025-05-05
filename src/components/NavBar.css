@@ -110,7 +110,7 @@ body {
     width: 100%;
     text-align: center;
   }
-  /* Ocultar submenús completos (puedes ajustarlo si quieres acordeón JS) */
+  /* Ocultar submenús completos */
   .navbar__menu li > ul,
   .navbar__menu li ul li.has-submenu > ul {
     position: static;
