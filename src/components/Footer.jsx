@@ -23,7 +23,7 @@ function Footer() {
         <div className="footer__col">
           <h4>Síguenos</h4>
           <p>
-            <a href="https://www.facebook.com/share/16btZG4MVN/">
+            <a href="https://www.facebook.com/share/g/12LQVePZx1q/">
               <FaFacebookF />
             </a>
             <a href="https://instagram.com/ofs-santiago">
@@ -32,7 +32,6 @@ function Footer() {
             <a href="https://twitter.com/OFS_Santiago">
               <FaTwitter />
             </a>
-            {/* añade más iconos si quieres */}
           </p>
         </div>
         <div className="footer__col">
@@ -58,7 +57,6 @@ function Footer() {
             <li>
               <Link to="/biblioteca">Biblioteca</Link>
             </li>
-            {/* …otros enlaces */}
           </ul>
         </div>
       </div>
