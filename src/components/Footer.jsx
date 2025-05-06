@@ -26,7 +26,7 @@ function Footer() {
             <a href="https://www.facebook.com/share/g/12LQVePZx1q/">
               <FaFacebookF />
             </a>
-            <a href="https://instagram.com/ofs-santiago">
+            <a href="https://www.instagram.com/ofsstarosadeviterbo/">
               <FaInstagram />
             </a>
             <a href="https://twitter.com/OFS_Santiago">
