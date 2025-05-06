@@ -1,9 +1,11 @@
 /* Documentos.css */
 .doc-container {
+  margin: 4rem auto;
   max-width: 960px;
-  margin: 2rem auto;
   padding: 1rem;
-  color: var(--color-text);
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 /* Hero común: imagen + bloque de texto */
